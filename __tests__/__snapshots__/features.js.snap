@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`optional chaining should transform properly 1`] = `
+"\\"use strict\\";
+
+var A = null;
+var B = (A === null || A === void 0 ? void 0 : A.toFixed(2)) || 3;
+B;"
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transforms computed members 1`] = `
+"\\"use strict\\";
+
+var MyEnum;
+
+(function (MyEnum) {
+  MyEnum[MyEnum[\\"A\\"] = 1] = \\"A\\";
+  MyEnum[MyEnum[\\"B\\"] = 1] = \\"B\\";
+  MyEnum[MyEnum[\\"C\\"] = 2] = \\"C\\";
+  MyEnum[MyEnum[\\"D\\"] = 2] = \\"D\\";
+  MyEnum[MyEnum[\\"E\\"] = 1] = \\"E\\";
+  MyEnum[MyEnum[\\"F\\"] = 2] = \\"F\\";
+  MyEnum[MyEnum[\\"G\\"] = 1] = \\"G\\";
+  MyEnum[MyEnum[\\"H\\"] = Math.pow(A, Math.pow(B, C))] = \\"H\\";
+  MyEnum[MyEnum[\\"I\\"] = 1048576] = \\"I\\";
+})(MyEnum || (MyEnum = {}));"
+`;
+
+exports[`Transforms no initializers 1`] = `
+"\\"use strict\\";
+
+var Direction;
+
+(function (Direction) {
+  Direction[Direction[\\"Left\\"] = 0] = \\"Left\\";
+  Direction[Direction[\\"Right\\"] = 1] = \\"Right\\";
+  Direction[Direction[\\"Down\\"] = 2] = \\"Down\\";
+  Direction[Direction[\\"Up\\"] = 3] = \\"Up\\";
+})(Direction || (Direction = {}));
+
+;"
+`;
+
+exports[`Transforms string members 1`] = `
+"\\"use strict\\";
+
+var Enum;
+
+(function (Enum) {
+  Enum[Enum[\\"A\\"] = 1] = \\"A\\";
+  Enum[Enum[\\"B\\"] = 1] = \\"B\\";
+  Enum[\\"C\\"] = \\"\\";
+  Enum[\\"D\\"] = \\"\\";
+  Enum[Enum[\\"E\\"] = 1] = \\"E\\";
+  Enum[Enum[\\"F\\"] = 2] = \\"F\\";
+})(Enum || (Enum = {}));"
+`;
