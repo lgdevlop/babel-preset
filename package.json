@@ -19,7 +19,7 @@
   "peerDependencies": {
     "@babel/core": "^7.0.0-0"
   },
-  "dependencies": {    
+  "dependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.0",
     "@babel/helper-plugin-utils": "^7.8.3",
@@ -31,7 +31,6 @@
     "@babel/plugin-transform-flow-strip-types": "7.9.0",
     "@babel/plugin-transform-modules-commonjs": "7.9.0",
     "@babel/preset-env": "7.9.0",
-    "@babel/preset-env-standalone": "7.8.3",
     "@babel/preset-flow": "7.9.0",
     "@babel/preset-react": "7.9.4",
     "@babel/preset-typescript": "7.9.0",
@@ -40,7 +39,6 @@
   },
   "devDependencies": {
     "@babel/generator": "^7.5.0",
-    "@babel/preset-env": "^7.5.0",
     "@intelie/eslint-config": "^2.0.7",
     "@intelie/prettier-config": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^2.22.0",
