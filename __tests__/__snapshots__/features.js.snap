@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`optional chaining should transform properly 1`] = `
+exports[`features null coalesce 1`] = `
+"\\"use strict\\";
+
+var A = null;
+A !== null && A !== void 0 ? A : 2;"
+`;
+
+exports[`features optional chaining 1`] = `
 "\\"use strict\\";
 
 var A = null;

@@ -35,9 +35,9 @@ export const presets = [
         }
     ],
     '@babel/react',
-    '@babel/flow',
     '@babel/preset-typescript',
-    'const-enum'
+    'const-enum',
+    '@babel/flow'
 ]
 
 export const plugins = [
