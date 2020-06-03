@@ -1,6 +1,6 @@
 {
   "name": "@intelie/babel-preset",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Babel preset for Intelie Typescript projects",
   "repository": "https://github.com/intelie/babel-preset-intelie",
   "author": "Rafael Mello Campanari <",
