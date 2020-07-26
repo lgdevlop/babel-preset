@@ -38,6 +38,7 @@ This preset has several plugins and presets.
     @babel/plugin-transform-async-to-generator
     @babel/plugin-syntax-dynamic-import
     @babel/plugin-transform-modules-commonjs
+    babel-plugin-styled-components
 
 
 ## Usage
