@@ -1,9 +1,5 @@
+import options from '../babel.config'
 import { transformAsync } from '@babel/core'
-import preset from '../src'
-
-const options = {
-    presets: [preset]
-}
 
 describe('features', () => {
     test('optional chaining', async () => {

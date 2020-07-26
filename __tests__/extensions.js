@@ -1,9 +1,5 @@
 import { transformAsync } from '@babel/core'
-import preset from '../src'
-
-const options = {
-    presets: [preset]
-}
+import options from '../babel.config'
 
 const input = `const enum Direction { Left, Right, Down, Up };
 `
