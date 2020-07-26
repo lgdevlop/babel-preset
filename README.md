@@ -8,12 +8,14 @@ Using npm:
 
 ```sh
 npm install --save-dev @intelie/babel-preset
+npx install-peerdeps@2.0.1 --dev --only-peers @intelie/babel-preset
 ```
 
 or using yarn:
 
 ```sh
 yarn add @intelie/babel-preset --dev
+npx install-peerdeps@2.0.1 --dev --only-peers --yarn @intelie/babel-preset
 ```
 
 ## Description
