@@ -3,29 +3,23 @@
 exports[`Transforms *.ts 1`] = `
 "\\"use strict\\";
 
-var Direction;
-
-(function (Direction) {
-  Direction[Direction[\\"Left\\"] = 0] = \\"Left\\";
-  Direction[Direction[\\"Right\\"] = 1] = \\"Right\\";
-  Direction[Direction[\\"Down\\"] = 2] = \\"Down\\";
-  Direction[Direction[\\"Up\\"] = 3] = \\"Up\\";
-})(Direction || (Direction = {}));
-
+var Direction = {
+  Left: 0,
+  Right: 1,
+  Down: 2,
+  Up: 3
+};
 ;"
 `;
 
 exports[`Transforms *.tsx 1`] = `
 "\\"use strict\\";
 
-var Direction;
-
-(function (Direction) {
-  Direction[Direction[\\"Left\\"] = 0] = \\"Left\\";
-  Direction[Direction[\\"Right\\"] = 1] = \\"Right\\";
-  Direction[Direction[\\"Down\\"] = 2] = \\"Down\\";
-  Direction[Direction[\\"Up\\"] = 3] = \\"Up\\";
-})(Direction || (Direction = {}));
-
+var Direction = {
+  Left: 0,
+  Right: 1,
+  Down: 2,
+  Up: 3
+};
 ;"
 `;
