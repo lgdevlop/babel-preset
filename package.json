@@ -69,7 +69,8 @@
     "extends": "@intelie"
   },
   "files": [
-    "lib"
+    "lib",
+    "./babel-config.js"
   ],
   "jest": {
     "setupFiles": [
