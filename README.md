@@ -31,13 +31,6 @@ This preset has several plugins and presets.
 
 ### Plugins
 
-    @babel/plugin-transform-flow-strip-types
-    @babel/plugin-proposal-optional-chaining
-    @babel/plugin-proposal-class-properties
-    @babel/plugin-proposal-object-rest-spread
-    @babel/plugin-transform-async-to-generator
-    @babel/plugin-syntax-dynamic-import
-    @babel/plugin-transform-modules-commonjs
     babel-plugin-styled-components
 
 
