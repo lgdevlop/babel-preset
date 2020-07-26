@@ -70,7 +70,7 @@
   },
   "files": [
     "lib",
-    "./babel-config.js"
+    "./babel.config.js"
   ],
   "jest": {
     "setupFiles": [
