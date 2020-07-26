@@ -1,6 +1,6 @@
 import { declare } from '@babel/helper-plugin-utils'
 import constEnum from 'babel-plugin-const-enum'
-import { presets, plugins } from '../babel.config'
+import { presets, plugins } from '../lib/babel.config'
 
 export default declare((api, { allExtensions = false, transform }) => {
     api.assertVersion(7)

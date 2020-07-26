@@ -1,9 +1,9 @@
 import { transformAsync } from '@babel/core'
-import preset from '../src'
+import babelOptions from '../lib/babel.config'
 
 const options = {
     filename: 'file.ts',
-    presets: [preset]
+    ...babelOptions
 }
 
 it('Transforms no initializers', async () => {

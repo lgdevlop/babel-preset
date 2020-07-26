@@ -1,4 +1,4 @@
-import options from '../babel.config'
+import options from '../lib/babel.config'
 import { transformAsync } from '@babel/core'
 
 describe('features', () => {
