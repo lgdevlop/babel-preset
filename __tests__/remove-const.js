@@ -1,5 +1,5 @@
 import { transformAsync } from '@babel/core'
-import babelOptions from '../lib/babel.config'
+import babelOptions from '../babel.config'
 
 const options = {
     filename: 'file.ts',

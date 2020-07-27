@@ -2,7 +2,7 @@ import React from 'react'
 import { transformAsync } from '@babel/core'
 
 import { render } from '@testing-library/react'
-import { presets, plugins } from '../lib/babel.config'
+import { presets, plugins } from '../babel.config'
 
 const options = {
     presets,
