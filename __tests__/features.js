@@ -28,4 +28,31 @@ describe('features', () => {
 
         expect(evaluated).toEqual(2)
     })
+    it('private methods', async () => {
+        const input = `class B {
+
+            #b () {
+                return 42
+            }
+
+            getB () {
+                return 42
+            }
+
+        }
+        
+        export default B
+        `
+
+        const { code: output } = await transformAsync(input, {
+            ...options,
+            filename: 'file.ts'
+        })
+        expect(output).toMatchSnapshot()
+
+        const B = eval(output)
+        const b = new B()
+
+        expect(b.getB()).toEqual(42)
+    })
 })
