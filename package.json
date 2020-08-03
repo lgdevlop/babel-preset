@@ -1,6 +1,6 @@
 {
   "name": "@intelie/babel-preset",
-  "version": "3.0.5",
+  "version": "3.1.0",
   "description": "Babel preset for Intelie Typescript projects",
   "repository": "https://github.com/intelie/babel-preset-intelie",
   "author": "Rafael Mello Campanari <",
@@ -19,11 +19,11 @@
   "dependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-flow": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "babel-plugin-const-enum": "^1.0.1",
     "babel-plugin-styled-components": "^1.11.1",
     "babel-preset-const-enum": "^1.0.0"
@@ -31,19 +31,21 @@
   "peerDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-flow": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "babel-plugin-const-enum": "^1.0.1",
     "babel-plugin-styled-components": "^1.11.1",
     "babel-preset-const-enum": "^1.0.0"
   },
   "devDependencies": {
     "@babel/generator": "^7.10.5",
+    "@babel/polyfill": "^7.10.4",
     "@intelie/eslint-config": "^3.0.2",
     "@intelie/prettier-config": "^2.0.1",
+    "@testing-library/react": "^10.4.7",
     "@typescript-eslint/eslint-plugin": "^3.7.0",
     "@typescript-eslint/parser": "^3.7.0",
     "babel-eslint": "^10.1.0",
@@ -64,9 +66,7 @@
     "prettier-eslint": "^11.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "styled-components": "^5.1.1",
-    "@testing-library/react": "^10.4.7",
-    "@babel/polyfill": "^7.10.4"
+    "styled-components": "^5.1.1"
   },
   "prettier": "@intelie/prettier-config",
   "eslintConfig": {
