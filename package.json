@@ -18,24 +18,26 @@
   },
   "dependencies": {
     "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-flow": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "babel-plugin-const-enum": "^1.0.1",
-    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-styled-components": "^1.11.1",
     "babel-preset-const-enum": "^1.0.0"
   },
   "peerDependencies": {
     "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-flow": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "babel-plugin-const-enum": "^1.0.1",
-    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-styled-components": "^1.11.1",
     "babel-preset-const-enum": "^1.0.0"
   },
   "devDependencies": {
