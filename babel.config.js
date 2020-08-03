@@ -20,5 +20,5 @@ module.exports = {
         ],
         '@babel/flow'
     ],
-    plugins: [require('babel-plugin-styled-components')]
+    plugins: [require('babel-plugin-styled-components'), require('@babel/plugin-transform-modules-commonjs')]
 }
