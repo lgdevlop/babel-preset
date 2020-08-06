@@ -55,4 +55,25 @@ describe('features', () => {
 
         expect(b.getB()).toEqual(42)
     })
+
+    it('logical assignment', async () => {
+        const input = `
+        let a = 0
+        const b = 2
+
+        a ||= b
+        
+        export default a
+        `
+
+        const { code: output } = await transformAsync(input, {
+            ...options,
+            filename: 'file.ts'
+        })
+        expect(output).toMatchSnapshot()
+
+        const a = eval(output)
+
+        expect(a).toEqual(2)
+    })
 })

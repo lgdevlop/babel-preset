@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`features logical assignment 1`] = `
+"\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+exports.default = void 0;
+var a = 0;
+var b = 2;
+a || (a = b);
+var _default = a;
+exports.default = _default;"
+`;
+
 exports[`features null coalesce 1`] = `
 "\\"use strict\\";
 
