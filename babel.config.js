@@ -17,8 +17,7 @@ module.exports = {
             {
                 transform: 'constObject'
             }
-        ],
-        '@babel/flow'
+        ]
     ],
     plugins: [require('babel-plugin-styled-components'), require('@babel/plugin-transform-modules-commonjs')]
 }
