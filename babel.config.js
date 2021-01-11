@@ -19,5 +19,5 @@ module.exports = {
             }
         ]
     ],
-    plugins: [require('babel-plugin-styled-components'), require('@babel/plugin-transform-modules-commonjs')]
+    plugins: [require('babel-plugin-styled-components')]
 }

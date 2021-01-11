@@ -46,3 +46,8 @@ This preset has several plugins and presets.
   "presets": ["@intelie/babel-preset"]
 }
 ```
+
+
+## Developing
+
+Change `babel.config.js` and it will be served as main file of the library.
