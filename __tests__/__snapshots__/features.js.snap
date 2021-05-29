@@ -43,7 +43,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var _b = new WeakSet();
+var _b = /*#__PURE__*/new WeakSet();
 
 var B = /*#__PURE__*/function () {
   function B() {
@@ -62,9 +62,9 @@ var B = /*#__PURE__*/function () {
   return B;
 }();
 
-var _b2 = function _b2() {
+function _b2() {
   return 42;
-};
+}
 
 var _default = B;
 exports.default = _default;"
