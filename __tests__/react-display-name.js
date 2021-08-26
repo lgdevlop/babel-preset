@@ -55,4 +55,29 @@ return factory;
 
         expect(element.type.name).toBe('MyFunctionComponent')
     })
+
+    it('Transforms function expression components', async () => {
+        const classComponentInput = `
+            function factory (React) {
+                const MyFunctionComponent = () => {
+                    return <div>1</div>
+                }
+
+                return MyFunctionComponent
+            }
+    `
+
+        const { code: classComponentOutput } = await transformAsync(classComponentInput, options)
+
+        expect(classComponentOutput).toMatchSnapshot()
+
+        const MyComponentFactory = new Function(`
+        ${classComponentOutput}
+return factory;
+`)()
+        const MyComponent = MyComponentFactory(React)
+        const element = <MyComponent />
+
+        expect(element.type.name).toBe('MyFunctionComponent')
+    })
 })

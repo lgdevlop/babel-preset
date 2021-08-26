@@ -58,3 +58,15 @@ function factory(React) {
   };
 }"
 `;
+
+exports[`react-display-name test suite Transforms function expression components 1`] = `
+"\\"use strict\\";
+
+function factory(React) {
+  var MyFunctionComponent = function MyFunctionComponent() {
+    return /*#__PURE__*/React.createElement(\\"div\\", null, \\"1\\");
+  };
+
+  return MyFunctionComponent;
+}"
+`;
