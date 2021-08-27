@@ -5,6 +5,15 @@ exports[`react-display-name test suite Transforms class components 1`] = `
 
 function _typeof(obj) { \\"@babel/helpers - typeof\\"; if (typeof Symbol === \\"function\\" && typeof Symbol.iterator === \\"symbol\\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \\"function\\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \\"symbol\\" : typeof obj; }; } return _typeof(obj); }
 
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require(\\"react\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\\"Cannot call a class as a function\\"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\\"value\\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -25,48 +34,70 @@ function _isNativeReflectConstruct() { if (typeof Reflect === \\"undefined\\" ||
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function factory(React) {
-  return /*#__PURE__*/function (_React$Component) {
-    _inherits(MyClassComponent, _React$Component);
+var MyClassComponent = /*#__PURE__*/function (_React$Component) {
+  _inherits(MyClassComponent, _React$Component);
 
-    var _super = _createSuper(MyClassComponent);
+  var _super = _createSuper(MyClassComponent);
 
-    function MyClassComponent() {
-      _classCallCheck(this, MyClassComponent);
+  function MyClassComponent() {
+    _classCallCheck(this, MyClassComponent);
 
-      return _super.apply(this, arguments);
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(MyClassComponent, [{
+    key: \\"render\\",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement(\\"div\\", null, \\"1\\");
     }
+  }]);
 
-    _createClass(MyClassComponent, [{
-      key: \\"render\\",
-      value: function render() {
-        return /*#__PURE__*/React.createElement(\\"div\\", null, \\"1\\");
-      }
-    }]);
+  return MyClassComponent;
+}(_react.default.Component);
 
-    return MyClassComponent;
-  }(React.Component);
-}"
+MyClassComponent.displayName = \\"MyClassComponent\\";
+var _default = MyClassComponent;
+exports.default = _default;"
 `;
 
 exports[`react-display-name test suite Transforms function components 1`] = `
 "\\"use strict\\";
 
-function factory(React) {
-  return function MyFunctionComponent() {
-    return /*#__PURE__*/React.createElement(\\"div\\", null, \\"1\\");
-  };
-}"
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require(\\"react\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function MyFunctionComponent() {
+  return /*#__PURE__*/_react.default.createElement(\\"div\\", null, \\"1\\");
+}
+
+MyFunctionComponent.displayName = \\"MyFunctionComponent\\";
+var _default = MyFunctionComponent;
+exports.default = _default;"
 `;
 
 exports[`react-display-name test suite Transforms function expression components 1`] = `
 "\\"use strict\\";
 
-function factory(React) {
-  var MyFunctionComponent = function MyFunctionComponent() {
-    return /*#__PURE__*/React.createElement(\\"div\\", null, \\"1\\");
-  };
+Object.defineProperty(exports, \\"__esModule\\", {
+  value: true
+});
+exports.default = void 0;
 
-  return MyFunctionComponent;
-}"
+var _react = _interopRequireDefault(require(\\"react\\"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var MyFunctionExpressionComponent = function MyFunctionExpressionComponent() {
+  return /*#__PURE__*/_react.default.createElement(\\"div\\", null, \\"1\\");
+};
+
+MyFunctionExpressionComponent.displayName = \\"MyFunctionExpressionComponent\\";
+var _default = MyFunctionExpressionComponent;
+exports.default = _default;"
 `;

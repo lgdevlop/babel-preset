@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 /* eslint-disable no-new-func */
 import { transformAsync } from '@babel/core'
 import babelOptions from '../babel.config'
@@ -10,74 +11,69 @@ const options = {
 describe('react-display-name test suite', () => {
     it('Transforms class components', async () => {
         const classComponentInput = `
-            function factory (React) {
-                return class MyClassComponent extends React.Component {
-                    render() {
-                        return <div>1</div>
-                    }
+            import React from 'react'
+
+            class MyClassComponent extends React.Component {
+                render() {
+                    return <div>1</div>
                 }
             }
-    `
+            export default MyClassComponent
+        `
 
-        const { code: classComponentOutput } = await transformAsync(classComponentInput, options)
+        const { code: classComponentOutput } = await transformAsync(classComponentInput, {
+            ...options,
+            sourceType: 'module'
+        })
 
         expect(classComponentOutput).toMatchSnapshot()
-
-        const MyComponentFactory = new Function(`
-        ${classComponentOutput}
-return factory;
-`)()
-        const MyComponent = MyComponentFactory(React)
+        const MyComponent = eval(classComponentOutput)
         const element = <MyComponent />
 
-        expect(element.type.name).toBe('MyClassComponent')
+        expect(element.type.displayName).toBe('MyClassComponent')
     })
 
     it('Transforms function components', async () => {
         const classComponentInput = `
-            function factory (React) {
-                return function MyFunctionComponent () {
-                    return <div>1</div>
-                }
-            }
-    `
+            import React from 'react'
 
-        const { code: classComponentOutput } = await transformAsync(classComponentInput, options)
+            function MyFunctionComponent () {
+                return <div>1</div>
+            }
+            export default MyFunctionComponent
+        `
+
+        const { code: classComponentOutput } = await transformAsync(classComponentInput, {
+            ...options,
+            sourceType: 'module'
+        })
 
         expect(classComponentOutput).toMatchSnapshot()
-
-        const MyComponentFactory = new Function(`
-        ${classComponentOutput}
-return factory;
-`)()
-        const MyComponent = MyComponentFactory(React)
+        const MyComponent = eval(classComponentOutput)
         const element = <MyComponent />
 
-        expect(element.type.name).toBe('MyFunctionComponent')
+        expect(element.type.displayName).toBe('MyFunctionComponent')
     })
 
     it('Transforms function expression components', async () => {
         const classComponentInput = `
-            function factory (React) {
-                const MyFunctionComponent = () => {
-                    return <div>1</div>
-                }
+            import React from 'react'
 
-                return MyFunctionComponent
+            const MyFunctionExpressionComponent = () => {
+                return <div>1</div>
             }
-    `
+            export default MyFunctionExpressionComponent
+        `
 
-        const { code: classComponentOutput } = await transformAsync(classComponentInput, options)
+        const { code: classComponentOutput } = await transformAsync(classComponentInput, {
+            ...options,
+            sourceType: 'module'
+        })
 
         expect(classComponentOutput).toMatchSnapshot()
-
-        const MyComponentFactory = new Function(`
-        ${classComponentOutput}
-return factory;
-`)()
-        const MyComponent = MyComponentFactory(React)
+        const MyComponent = eval(classComponentOutput)
         const element = <MyComponent />
 
-        expect(element.type.name).toBe('MyFunctionComponent')
+        expect(element.type.displayName).toBe('MyFunctionExpressionComponent')
     })
 })

@@ -19,5 +19,5 @@ module.exports = {
             }
         ]
     ],
-    plugins: [require('babel-plugin-styled-components')]
+    plugins: [require('babel-plugin-styled-components'), require('babel-plugin-add-react-displayname')]
 }
