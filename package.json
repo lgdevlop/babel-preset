@@ -14,7 +14,8 @@
   "scripts": {
     "build": "cp ./babel.config.js ./lib && babel src --out-dir lib",
     "prepublishOnly": "yarn run build",
-    "test": "jest"
+    "test": "jest",
+    "release": "npx np"
   },
   "dependencies": {
     "@babel/cli": "7.14.3",
@@ -24,6 +25,7 @@
     "@babel/preset-flow": "7.13.13",
     "@babel/preset-react": "7.13.13",
     "@babel/preset-typescript": "7.13.0",
+    "babel-plugin-add-react-displayname": "^0.0.5",
     "babel-plugin-const-enum": "1.0.1",
     "babel-plugin-styled-components": "1.12.0",
     "babel-preset-const-enum": "1.0.0"
