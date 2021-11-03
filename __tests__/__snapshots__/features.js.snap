@@ -43,13 +43,17 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+function _classPrivateMethodInitSpec(obj, privateSet) { _checkPrivateRedeclaration(obj, privateSet); privateSet.add(obj); }
+
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError(\\"Cannot initialize the same private elements twice on an object\\"); } }
+
 var _b = /*#__PURE__*/new WeakSet();
 
 var B = /*#__PURE__*/function () {
   function B() {
     _classCallCheck(this, B);
 
-    _b.add(this);
+    _classPrivateMethodInitSpec(this, _b);
   }
 
   _createClass(B, [{
