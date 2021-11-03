@@ -2,7 +2,7 @@
   "name": "@intelie/babel-preset",
   "version": "5.2.0",
   "description": "Babel preset for Intelie Typescript projects",
-  "repository": "https://github.com/intelie/babel-preset-intelie",
+  "repository": "https://github.com/intelie/babel-preset",
   "author": "Rafael Mello Campanari <",
   "license": "MIT",
   "main": "lib/index.js",
