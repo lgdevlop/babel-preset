@@ -74,7 +74,10 @@
   },
   "prettier": "@intelie/prettier-config",
   "eslintConfig": {
-    "extends": "@intelie"
+    "extends": "@intelie",
+    "rules": {
+      "no-eval": "off"
+    }
   },
   "files": [
     "lib"
