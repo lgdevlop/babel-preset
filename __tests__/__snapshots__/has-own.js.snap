@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Object.hasOwn test suite Should add polyfills import for Object.hasOwn built-in usage 1`] = `
+"\\"use strict\\";
+
+require(\\"core-js/modules/es.object.has-own.js\\");
+
+Object.hasOwn({
+  abc: 'abc'
+}, 'abc');"
+`;
