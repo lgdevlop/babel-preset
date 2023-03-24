@@ -3,11 +3,12 @@ module.exports = {
         [
             '@babel/env',
             {
-                useBuiltIns: false,
+                useBuiltIns: 'usage',
                 shippedProposals: true,
                 targets: {
                     browsers: ['ie >= 11']
-                }
+                },
+                corejs: '3.29.1'
             }
         ],
         '@babel/react',
